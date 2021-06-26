@@ -1,42 +1,52 @@
+Vue.config.devtools = true;
+
+let number = 1;
+
 const app = new Vue (
     {
         el: '#app',
         data: {
 
             pictures : [
-                'https://d3aux7tjp119y2.cloudfront.net/original_images/f5510725-Anders20Ekholm-Folio2028129-IBSweb_BAPCCG2.jpg',
-                'https://www.vintagerides.travel/wp-content/uploads/voyage-moto-kirghizistan-motorcycle-tour-kyrgyzstan-1-scaled.jpg',
-                'https://media.timeout.com/images/105590957/630/472/image.jpg',
-                'https://images.france.fr/zeaejvyq9bhj/6s7ixdfkSkq66Sy84ui8M6/a66d3814252dd6e6c8169d15195cf29a/mafate-reunion-island-irt-frog-974-photographies.jpg'
+                'img/Etretat Juin 2020_DSC_03701593167148126.jpg',
+                'img/Etretat Juin 2020_DSC_04041593167148142.jpg',
+                'img/Etretat Juin 2020_DSC_04091593167148144.jpg',
+                'img/Italie septembre 2020_DSC_04881601329170243.jpg',
             ],
             pictureIndex: 0,
         },
 
+        created() {
+
+            setInterval (()=> {
+                this.next();
+            }, 4000)
+
+        },
+
         methods: {
             next: function () {
-                if (this.pictureIndex === (this.pictures.lenght - 1)) {
+
+                if (this.pictureIndex === (this.pictures.length - number)) {
                     this.pictureIndex = 0;
 
                 } else{
-                    this.pictureIndex++;
+                    this.pictureIndex ++;
                 }
             },
 
-            prev: function() {
-                if (this.pictureIndex === 0){
-                    this.pictureIndex = this.pictures.lenght - 1 ;
+            prev: function () {
 
-                } else {
-                    this.pictureIndex--;
-                }
+                if (this.pictureIndex === 0) {
+                    this.pictureIndex = this.pictures.length - number;
 
-            }
-        }
-
+                }   else {
+                    this.pictureIndex ;
+                }              
         
-
-
+            }   
+        }
 
     }
 
-)
+);
