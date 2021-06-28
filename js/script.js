@@ -20,7 +20,7 @@ const app = new Vue (
 
             setInterval (()=> {
                 this.next();
-            }, 4000)
+            },6000)
 
         },
 
@@ -41,12 +41,24 @@ const app = new Vue (
                     this.pictureIndex = this.pictures.length - number;
 
                 }   else {
-                    this.pictureIndex ;
+                    this.pictureIndex --;
                 }              
         
             }   
+        },
+
+        pointNow: function (index) {
+
+            if (index === this.pictureIndex) {
+                return 'currentPic';
+
+            } else {
+                return '';
+            }
+
         }
 
     }
+
 
 );

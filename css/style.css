@@ -2,7 +2,23 @@
     
 }
 
+.slider-picture{
+    position: relative;
+}
 
 .slider-picture img {
     width: 100%;
+}
+
+
+.slider-points{
+    position: absolute;
+    bottom: 45px;
+    width: 100%;
+    text-align: center;
+}
+
+.fa-circle{
+    color: rgb(255, 255, 255);
+    margin-left: 5px;
 }
