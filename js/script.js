@@ -8,9 +8,9 @@ const app = new Vue (
         data: {
 
             pictures : [
-                'img/Etretat Juin 2020_DSC_03701593167148126.jpg',
-                'img/Etretat Juin 2020_DSC_04041593167148142.jpg',
-                'img/Etretat Juin 2020_DSC_04091593167148144.jpg',
+                'https://wallpaperaccess.com/full/1336518.png',
+                'https://files.wallpaperpass.com/2019/10/matrix%20wallpaper%20048%20-%201920x1080-768x432.jpg',
+                'https://p4.wallpaperbetter.com/wallpaper/243/612/913/binary-coding-blue-matrix-technology-wallpaper-preview.jpg',
                 'img/Italie septembre 2020_DSC_04881601329170243.jpg',
             ],
             pictureIndex: 0,
@@ -44,19 +44,28 @@ const app = new Vue (
                     this.pictureIndex --;
                 }              
         
-            }   
-        },
+            },
+            
+    
 
-        pointNow: function (index) {
+            changeTo : function (index) {
 
-            if (index === this.pictureIndex) {
-                return 'currentPic';
+                this.pictureIndex = index;
+            },
 
-            } else {
-                return '';
+            pointNow: function (index) {
+
+                if (index === this.pictureIndex) {
+                    return 'currentPic';
+    
+                } else {
+                    return '';
+                }
+    
             }
-
         }
+
+      
 
     }
 
