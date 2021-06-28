@@ -9,6 +9,12 @@
 .slider-picture img {
     width: 100%;
 }
+.arrow {
+    padding-top: 300px; 
+    font-size: 30px;
+    cursor: pointer;
+}
+
 
 
 .slider-points{
@@ -21,4 +27,9 @@
 .fa-circle{
     color: rgb(255, 255, 255);
     margin-left: 5px;
+    cursor: pointer;
+}
+
+.left-side{
+    text-align: end;
 }
