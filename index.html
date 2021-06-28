@@ -24,8 +24,10 @@
                     <img :src="pictures[pictureIndex]" alt="picture">
                     
                     <div class="slider-points">
-                        <i :class="pointNow"  v-for="(img, index) in pictures" class="fas fa-circle">
-                            
+                        <i  :class="pointNow"
+                            v-for="(img, index) in pictures"
+                            class="fas fa-circle"
+                            @click="changeTo(index)">                            
                         </i>
                     </div>
                 </div>
